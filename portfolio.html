@@ -17,13 +17,15 @@
 		<link rel="stylesheet" href="./css/styles.css" />
 		<title>Portfolio</title>
 	</head>
+
 	<body>
 		<!-- Header -->
 
 		<header class="page-header">
 			<div class="container flex-container">
 				<a lang="en" href="./index.html" class="logo-title">
-					<span class="logo-blue">Web</span>Studio
+					<span class="logo-blue">Web</span>
+					Studio
 				</a>
 
 				<nav class="navigation">
@@ -314,7 +316,8 @@
 			<div class="container flex-footer">
 				<div class="address-wrp">
 					<a lang="en" href="./index.html" class="logo-title">
-						<span class="logo-blue">Web</span>Studio
+						<span class="logo-blue">Web</span>
+						Studio
 					</a>
 					<address id="contacts">
 						<a
@@ -344,8 +347,9 @@
 								target="_blank"
 								rel="noopener norefferer"
 								class="social-link"
+								aria-label="instagram"
 							>
-								<svg class="social-icon">
+								<svg class="social-icon" width="20" height="20">
 									<use href="./images/icons.svg#icon-instagram-member"></use>
 								</svg>
 							</a>
@@ -356,8 +360,9 @@
 								target="_blank"
 								rel="noopener norefferer"
 								class="social-link"
+								aria-label="twitter"
 							>
-								<svg class="social-icon">
+								<svg class="social-icon" width="20" height="20">
 									<use href="./images/icons.svg#icon-twitter-member"></use>
 								</svg>
 							</a>
@@ -368,8 +373,9 @@
 								target="_blank"
 								rel="noopener norefferer"
 								class="social-link"
+								aria-label="facebook"
 							>
-								<svg class="social-icon">
+								<svg class="social-icon" width="20" height="20">
 									<use href="./images/icons.svg#icon-facebook-member"></use>
 								</svg>
 							</a>
@@ -380,13 +386,26 @@
 								target="_blank"
 								rel="noopener norefferer"
 								class="social-link"
+								aria-label="linkedin"
 							>
-								<svg class="social-icon">
+								<svg class="social-icon" width="20" height="20">
 									<use href="./images/icons.svg#icon-linkedin-member"></use>
 								</svg>
 							</a>
 						</li>
 					</ul>
+				</div>
+				<div class="footer-form">
+					<h3 class="form-title">Подпишитесь на рассылку</h3>
+					<div class="form-wrp">
+						<input type="email" name="email" id="footer-email" placeholder="E-mail" />
+						<button class="footer-btn form-btn" type="submit">
+							Подписаться
+							<svg class="footer-btn-icon" width="24" height="24">
+								<use href="./images/icons.svg#icon-send"></use>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 		</footer>
