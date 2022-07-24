@@ -506,6 +506,8 @@ img {
 
 .social-items {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	list-style: none;
 	gap: 10px;
 }
@@ -760,6 +762,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	margin-bottom: 20px;
 }
 
 .contact-head {
@@ -814,6 +817,8 @@ img {
 }
 
 .comment-text {
+	width: 448px;
+	height: 120px;
 	padding: 12px 16px;
 	resize: none;
 	border: 1px solid rgba(33, 33, 33, 0.2);
@@ -825,10 +830,6 @@ img {
 
 .comment-text:focus-within {
 	border-color: var(--active-color);
-}
-
-.form-field:last-child {
-	margin-bottom: 20px;
 }
 
 .form-checkbox {
@@ -865,6 +866,12 @@ img {
 	transition: background-color 250ms var(--cubic), border-color 250ms var(--cubic);
 }
 
+.checkbox-icon:hover,
+.checkbox-icon:focus {
+	border-color: var(--active-color);
+	cursor: pointer;
+}
+
 .checkbox:checked + .checkbox-icon {
 	background-color: var(--active-color);
 	border-color: var(--active-color);
@@ -874,7 +881,7 @@ img {
 	background-position: center;
 }
 
-.form-checkbox a {
+.policy-link {
 	font-style: normal;
 	color: var(--active-color);
 	font-weight: 400;
@@ -927,13 +934,18 @@ img {
 	gap: 12px;
 }
 
-.form-wrp input {
+.footer-email {
 	padding: 16px;
 	min-width: 358px;
 	background-color: transparent;
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 	border-radius: 4px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: 0.03em;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-btn.form-btn {

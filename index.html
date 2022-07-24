@@ -537,11 +537,8 @@
 						</svg>
 					</button>
 					<form class="modal-form">
+						<h3 id="contact-head" class="contact-head">Оставьте свои данные, мы вам перезвоним</h3>
 						<div class="form-group" role="group" aria-labelledby="contact-head">
-							<h3 id="contact-head" class="contact-head">
-								Оставьте свои данные, мы вам перезвоним
-							</h3>
-
 							<label class="form-field">
 								<span class="form-label">Имя</span>
 								<input class="form-input" type="text" name="name" />
@@ -680,10 +677,10 @@
 						</li>
 					</ul>
 				</div>
-				<div class="footer-form">
+				<form action="footer-form">
 					<h3 class="form-title">Подпишитесь на рассылку</h3>
 					<div class="form-wrp">
-						<input type="email" name="email" id="footer-email" placeholder="E-mail" />
+						<input class="footer-email" type="email" name="email" placeholder="E-mail" />
 						<button class="footer-btn form-btn" type="submit">
 							Подписаться
 							<svg class="footer-btn-icon" width="24" height="24">
@@ -691,7 +688,7 @@
 							</svg>
 						</button>
 					</div>
-				</div>
+				</form>
 			</div>
 		</footer>
 		<script src="./js/modal.js"></script>
