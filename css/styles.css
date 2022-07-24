@@ -1,5 +1,6 @@
 :root {
 	/* Text color */
+	--pure-black: #000000;
 	--prime-color: #212121;
 	--active-color: #2196f3;
 	--prime-white: #ffffff;
@@ -12,8 +13,10 @@
 	--border-color: #eeeeee;
 	--second-border-color: #afb1b8;
 	--form-border-color: rgba(33, 33, 33, 0.2);
-	/* Cubic */
-	--cubic: cubic-bezier(0.4, 0, 0.2, 1);
+	/* Cubic time 250ms*/
+	--time-cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	/* Gradient */
+	--hero-gradient: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 }
 
 body {
@@ -97,7 +100,7 @@ img {
 	line-height: 1.19;
 	letter-spacing: 0.03em;
 	text-decoration: none;
-	color: #000000;
+	color: var(--pure-black);
 }
 
 .logo-blue {
@@ -146,7 +149,7 @@ img {
 	padding-bottom: 32px;
 	text-decoration: none;
 	color: var(--prime-color);
-	transition: color 250ms var(--cubic);
+	transition: color var(--time-cubic);
 }
 
 .nav-link.active {
@@ -193,7 +196,7 @@ img {
 	align-items: center;
 	text-decoration: none;
 	color: var(--grey-text);
-	transition: color 250ms var(--cubic);
+	transition: color var(--time-cubic);
 }
 
 .address-link:hover,
@@ -235,7 +238,7 @@ img {
 	max-width: 1600px;
 	height: 600px;
 	background-color: var(--prime-color);
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+	background-image: var(--hero-gradient),
 		url(../images/background/hero-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -271,7 +274,7 @@ img {
 	border: 1px solid transparent;
 	border-radius: 4px;
 	cursor: pointer;
-	transition: background-color 250ms var(--cubic);
+	transition: background-color var(--time-cubic);
 }
 
 .solutions .solutions-btn:hover,
@@ -422,7 +425,7 @@ img {
 	border: 1px solid var(--second-border-color);
 	border-radius: 4px;
 	color: var(--second-border-color);
-	transition: color 250ms var(--cubic), border-color 250ms var(--cubic);
+	transition: color var(--time-cubic), border-color var(--time-cubic);
 }
 
 .icon-client {
@@ -467,7 +470,7 @@ img {
 	letter-spacing: 0.03em;
 	line-height: 1.71;
 	color: var(--prime-white);
-	transition: color 250ms var(--cubic);
+	transition: color var(--time-cubic);
 }
 
 .footer-address {
@@ -484,7 +487,7 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	color: rgba(255, 255, 255, 0.6);
-	transition: color 250ms var(--cubic);
+	transition: color var(--time-cubic);
 }
 
 .footer-menu .address-link:hover,
@@ -533,7 +536,7 @@ img {
 	background-color: var(--social-bg-color);
 	color: var(--second-border-color);
 	border-radius: 50%;
-	transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
+	transition: color var(--time-cubic), background-color var(--time-cubic);
 }
 
 .social-icon {
@@ -578,8 +581,8 @@ img {
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
-	transition: color 250ms var(--cubic), background-color 250ms var(--cubic),
-		box-shadow 250ms var(--cubic);
+	transition: color var(--cubic), background-color var(--time-cubic),
+		box-shadow var(--time-cubic);
 }
 
 .active-btn {
@@ -612,7 +615,7 @@ img {
 .work-link {
 	text-decoration: none;
 	display: block;
-	transition: box-shadow 250ms var(--cubic);
+	transition: box-shadow var(--time-cubic);
 }
 
 .work-link:hover,
@@ -636,7 +639,7 @@ img {
 	background-color: rgba(33, 150, 243, 0.9);
 	transform: translateY(0);
 
-	transition: transform 250ms var(--cubic);
+	transition: transform var(--time-cubic);
 }
 
 .work-link:hover .work-overlay,
@@ -695,7 +698,7 @@ img {
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.2);
 	opacity: 1;
-	transition: opacity 250ms var(--cubic), visibility 250ms var(--cubic);
+	transition: opacity var(--time-cubic), visibility var(--time-cubic);
 	z-index: 3;
 	visibility: visible;
 }
@@ -719,7 +722,7 @@ img {
 	min-width: 528px;
 	min-height: 581px;
 	padding: 40px;
-	transition: transform 250ms var(--cubic), opacity 250ms var(--cubic);
+	transition: transform var(--time-cubic), opacity var(--time-cubic);
 	background-color: var(--prime-white);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
 		0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -741,7 +744,7 @@ img {
 	background-color: var(--prime-white);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-	transition: color 250ms var(--cubic);
+	transition: color var(--time-cubic);
 	cursor: pointer;
 }
 
@@ -796,7 +799,7 @@ img {
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	border-radius: 4px;
 	outline: none;
-	transition: border-color 250ms var(--cubic);
+	transition: border-color var(--time-cubic);
 	color: var(--active-color);
 }
 
@@ -805,7 +808,7 @@ img {
 	top: 50%;
 	left: 12px;
 	fill: var(--prime-color);
-	transition: fill 250ms var(--cubic);
+	transition: fill var(--time-cubic);
 }
 
 .form-input:focus-within {
@@ -825,7 +828,7 @@ img {
 	border-radius: 4px;
 	color: rgba(117, 117, 117, 0.5);
 	outline: none;
-	transition: border-color 250ms var(--cubic);
+	transition: border-color var(--time-cubic);
 }
 
 .comment-text:focus-within {
@@ -863,7 +866,7 @@ img {
 	height: 15px;
 	border-radius: 2px;
 	border: 2px solid var(--prime-color);
-	transition: background-color 250ms var(--cubic), border-color 250ms var(--cubic);
+	transition: background-color var(--time-cubic), border-color 2var(--time-cubic);
 }
 
 .checkbox-icon:hover,
@@ -908,7 +911,7 @@ img {
 	background-color: #2196f3;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
-	transition: background-color 250ms var(--cubic), box-shadow 250ms var(--cubic);
+	transition: background-color var(--time-cubic), box-shadow var(--time-cubic);
 	cursor: pointer;
 }
 
