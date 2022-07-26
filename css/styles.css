@@ -742,13 +742,15 @@ img {
 	background-color: var(--prime-white);
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	border-radius: 50%;
-	transition: color var(--time-cubic);
+	transition: color var(--time-cubic), outline-color var(--time-cubic);
 	cursor: pointer;
+	outline-color: transparent;
 }
 
 .close-btn:hover,
 .close-btn:focus {
 	color: var(--active-color);
+	outline-color: var(--active-color);
 }
 
 .close-icon {
@@ -809,11 +811,13 @@ img {
 	transition: fill var(--time-cubic);
 }
 
-.form-input:focus-within {
+.form-input:focus-within,
+.form-input:hover {
 	border-color: var(--active-color);
 }
 
-.form-input:focus-within + .form-icon {
+.form-input:focus-within + .form-icon,
+.form-input:hover + .form-icon {
 	fill: var(--active-color);
 }
 
@@ -850,12 +854,12 @@ img {
 	margin-left: 8px;
 }
 
-.checkbox {
+/* .checkbox {
 	position: absolute;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
-}
+} */
 
 .checkbox-icon {
 	margin-right: 8px;
@@ -864,19 +868,20 @@ img {
 	height: 15px;
 	border-radius: 2px;
 	border: 2px solid var(--prime-color);
-	transition: background-color var(--time-cubic), border-color 2var (--time-cubic);
+	transition: background-color var(--time-cubic), border-color var(--time-cubic);
 }
 
-.checkbox-icon:hover,
-.checkbox-icon:focus,
-.checkbox-icon:focus-within {
+.checkbox-icon:hover {
 	border-color: var(--active-color);
 	cursor: pointer;
 }
 
+.checkbox:focus + .checkbox-icon {
+	border-color: var(--active-color);
+}
 .checkbox:checked + .checkbox-icon {
 	background-color: var(--active-color);
-	border-color: var(--active-color);
+	border: none;
 	background: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='16' height='15' rx='2' fill='%232196F3'/%3E%3Cpath d='M3.95703 7.75166L3.88825 7.68604L3.81923 7.75141L2.93123 8.59258L2.85486 8.66492L2.93097 8.73753L6.42671 12.0724L6.49574 12.1382L6.56476 12.0724L14.069 4.91352L14.1449 4.84116L14.069 4.76881L13.1873 3.92764L13.1183 3.86183L13.0493 3.92761L6.49577 10.1735L3.95703 7.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E%0A");
 	background-size: contain;
 	background-origin: border-box;
@@ -891,6 +896,12 @@ img {
 	line-height: 1.71;
 	letter-spacing: 0.03em;
 	margin-left: 6px;
+	outline-color: transparent;
+	transition: outline-color var(--time-cubic);
+}
+
+.policy-link:focus {
+	outline-color: var(--active-color);
 }
 
 .btn-wrp {
@@ -912,6 +923,7 @@ img {
 	border-radius: 4px;
 	transition: background-color var(--time-cubic), box-shadow var(--time-cubic);
 	cursor: pointer;
+	outline: none;
 }
 
 .form-btn:hover,
