@@ -238,8 +238,7 @@ img {
 	max-width: 1600px;
 	height: 600px;
 	background-color: var(--prime-color);
-	background-image: var(--hero-gradient),
-		url(../images/background/hero-bg.jpg);
+	background-image: var(--hero-gradient), url(../images/background/hero-bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -581,8 +580,7 @@ img {
 	border-radius: 4px;
 	border: none;
 	cursor: pointer;
-	transition: color var(--cubic), background-color var(--time-cubic),
-		box-shadow var(--time-cubic);
+	transition: color var(--cubic), background-color var(--time-cubic), box-shadow var(--time-cubic);
 }
 
 .active-btn {
@@ -866,11 +864,12 @@ img {
 	height: 15px;
 	border-radius: 2px;
 	border: 2px solid var(--prime-color);
-	transition: background-color var(--time-cubic), border-color 2var(--time-cubic);
+	transition: background-color var(--time-cubic), border-color 2var (--time-cubic);
 }
 
 .checkbox-icon:hover,
-.checkbox-icon:focus {
+.checkbox-icon:focus,
+.checkbox-icon:focus-within {
 	border-color: var(--active-color);
 	cursor: pointer;
 }
